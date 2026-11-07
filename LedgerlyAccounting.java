@@ -242,7 +242,7 @@ public class LedgerlyAccounting extends JFrame {
         return new DefaultTableModel(cols, 0) { public boolean isCellEditable(int r, int c) { return false; } };
     }
 
-    // AUTOMATED LEDGER POSTING ROUTINE (Journal Tab & Entry Form)
+    // AUTOMATED LEDGER POSTING ROUTINE 
     JPanel journal() {
         JPanel p = card(); JPanel top = new JPanel(new BorderLayout()); top.setBackground(Color.WHITE);
         top.add(label("Record and review your financial entries.", 12, false, MUTED), BorderLayout.WEST);
@@ -295,7 +295,7 @@ public class LedgerlyAccounting extends JFrame {
         showMain();
     }
 
-    // ACCOUNT BALANCE COMPUTATION ENGINE (Ledger Tab)
+    // ACCOUNT BALANCE COMPUTATION ENGINE
     JPanel ledger() {
         JPanel p = card(); p.add(label("General Ledger Accounts Computed via Normal Balance Rules", 14, true, INK), BorderLayout.NORTH);
         DefaultTableModel m = model("Account Name", "Classification", "Total Debit", "Total Credit", "Ending Balance");
@@ -334,7 +334,7 @@ public class LedgerlyAccounting extends JFrame {
         AccountSummary(String cls) { classification = cls; }
     }
 
-    // SPLIT TABLE COLUMN LAYOUT RENDERING (Columnar Worksheet Tab)
+    // SPLIT TABLE COLUMN LAYOUT RENDERING 
     JPanel columnar() {
         JPanel p = card(); p.add(label("Split Column Worksheet — Debit & Credit Layout", 14, true, INK), BorderLayout.NORTH);
         DefaultTableModel m = model("Date", "Description", "Account", "Classification", "Debit Sub-Column", "Credit Sub-Column");
@@ -357,7 +357,7 @@ public class LedgerlyAccounting extends JFrame {
         return p;
     }
 
-    // TRIAL BALANCE DATA AGGREGATOR (Trial Balance Tab & Balance Proof)
+    // TRIAL BALANCE DATA AGGREGATOR 
     JPanel trialBalance() {
         JPanel p = card(); 
         JPanel top = new JPanel(new BorderLayout()); top.setBackground(Color.WHITE);
@@ -401,7 +401,7 @@ public class LedgerlyAccounting extends JFrame {
         return p;
     }
 
-    // LEDGER HISTORY & AUDIT TRACKING (Audit Log Tab)
+    // LEDGER HISTORY & AUDIT TRACKING 
     JPanel auditLogView() {
         JPanel p = card(); p.add(label("System Audit Trail & Ledger History", 14, true, INK), BorderLayout.NORTH);
         DefaultTableModel m = model("Timestamp", "Action Performed", "Details");
